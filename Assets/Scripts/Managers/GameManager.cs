@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public FPSController Player;
+    public PlayerController Player;
 
     bool isPaused = false;
 
