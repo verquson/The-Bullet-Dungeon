@@ -9,9 +9,7 @@ public class FPSController : MonoBehaviour
     [Header("Movement")]
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
-    public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-    public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
 
@@ -71,23 +69,9 @@ public class FPSController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
-        {
-           
-            moveDirection.y = jumpSpeed;
-        }
-        else
-        {
-            moveDirection.y = movementDirectionY;
-        }
+     
 
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
+        
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
@@ -95,10 +79,7 @@ public class FPSController : MonoBehaviour
         // Player and Camera rotation
         if (canMove)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
 
@@ -111,7 +92,7 @@ public class FPSController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Jos osutaan portaaliin niin kutsutaan BeginTeleport toiminto
+       
         
         
     }
