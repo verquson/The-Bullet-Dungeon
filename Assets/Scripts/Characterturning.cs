@@ -7,19 +7,19 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class Characterturning : MonoBehaviour
 {
-    [Serializefield] private float playerspeed = 5f;
-    [Serializefield] private float gravityvalue = -9f
-    [Serializefield] private float controllerdeadzone = 0.1f;
-    [Serializefield] private float gamepadrotatesmoothing = 1000f;
+    [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float gravityValue = -9f
+    [SerializeField] private float controllerDeadzone = 0.1f;
+    [SerializeField] private float gamepadRotateSmoothing = 1000f;
 
-    [Serializefield] private bool isGamepad
+    [SerializeField] private bool isGamepad;
 
     private CharacterController controller;
 
-    private vector2 movement;
-    private vector2 aim;
+    private Vector2 movement;
+    private Vector2 aim;
 
-    private vector3 playervelocity;
+    private Vector3 playervelocity;
 
     private PlayerControls playerControls;
 
@@ -63,10 +63,24 @@ public class Characterturning : MonoBehaviour
     }
     void HandleRotation()
     {
-
+        if (isGamepad)
+        {
+            if (Mathf.Abs(aim.x) > controllerDeadzone || Mathf.Abs(aim.y) > controllerDeadzone)
+            {
+                Vector3 playerDirection = Vector3.right * aim.x + Vector3.forward * aim.y;
+                if (playerDirection.sqrMagnitude > 0.0f)
+                {
+                    Quaternion newrotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, gamepadRotateSmoothing * Time.deltaTime);
+                }
+            }
+        }
     }
 
 
-
+    public void OnDeviceChange (PlayerInput pi)
+    {
+        isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
+    }
 
 }
