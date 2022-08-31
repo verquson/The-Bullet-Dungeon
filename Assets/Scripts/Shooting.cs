@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullets : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -16,15 +16,16 @@ public class Bullets : MonoBehaviour
     }
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+       
     }
 
-    public float thrust = 1.0f;
-    public Rigidbody rb;
+ 
+   
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.AddForce(0, 0, thrust, ForceMode.Impulse);
+ 
+        
     }
 }
