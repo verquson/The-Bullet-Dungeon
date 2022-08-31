@@ -28,10 +28,10 @@
                 {
                     "name": "",
                     "id": "312d84b7-cdfd-4625-8689-f4386d28be9e",
-                    "path": "",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KBM",
+                    "groups": "Controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -94,17 +94,72 @@
                 {
                     "name": "",
                     "id": "835287e3-d99c-40bf-944e-603aff3ed853",
-                    "path": "",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KBM",
+                    "groups": "Controller",
                     "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "ArrowAim",
+                    "id": "077523a4-9e50-4280-8d91-059a4f50a26c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8102c7e6-d88b-4140-a8a6-5e6bb3368f89",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f0be11bb-1068-465e-afa9-c2746476a377",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "03bb83fb-ff0b-48de-b632-a740b0d8183b",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "4a817120-398e-409b-8943-74a920d70625",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
-                    "id": "5ffe33b2-633f-41e1-b469-c698f437d74e",
+                    "id": "9f667caa-89bc-4050-b1e9-306daba89aa4",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
@@ -128,6 +183,17 @@
                 },
                 {
                     "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<XInputController>",
                     "isOptional": false,
                     "isOR": false
                 }
