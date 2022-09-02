@@ -17,7 +17,7 @@ public class HealthAndArmor : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        currentHealth = maxHealth;
+       //currentHealth = maxHealth;
         currentArmor = maxArmor;
     }
 

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletName: RegularBullet
   BulletDamage: 10
-  fireRate: 0.079
+  fireRate: 0.02
