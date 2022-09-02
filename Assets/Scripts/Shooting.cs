@@ -6,10 +6,12 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    bool fireOnCD = false;
+    public float fireRate = .1f;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && !fireOnCD)
         {
             Shoot();
         }
@@ -17,11 +19,15 @@ public class Shooting : MonoBehaviour
     void Shoot()
     {
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-       
+        fireOnCD = true;
+        Invoke("ResetFireCD", fireRate);
     }
 
- 
-   
+    void ResetFireCD()
+    {
+        fireOnCD = false;
+    }
+
 
     void Start()
     {
