@@ -21,6 +21,7 @@ void Start()
         {
             collision.gameObject.GetComponent<HealthAndArmor>().AddHealth();
         }
+        Destroy(this.gameObject);
     }
 
 

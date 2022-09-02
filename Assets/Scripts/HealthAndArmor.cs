@@ -5,18 +5,20 @@ using TMPro;
 
 public class HealthAndArmor : MonoBehaviour
 {
-    public float health;
-    public float armor;
-   // public TextMeshProUGUI armorText;
-   // public TextMeshProUGUI healthText;
+    public int maxHealth;
+    public int maxArmor;
+    int currentHealth;
+    int currentArmor;
+    //public TextMeshProUGUI armorText;
+    //public TextMeshProUGUI healthText;
 
 
 
     // Use this for initialization
     void Start()
     {
-        health = 100f;
-        armor = 20f;
+        currentHealth = maxHealth;
+        currentArmor = maxArmor;
     }
 
     // Update is called once per frame
@@ -29,44 +31,49 @@ public class HealthAndArmor : MonoBehaviour
 
     private void Max_Min_Stats()
     {
-        if (health >= 100f)
+        if (currentHealth >= maxHealth)
         {
-            health = 100f;
+            currentHealth = maxHealth;
         }
 
-        if (health <= 0f)
+        if (currentHealth <= 0)
         {
-            health = 0f;
+            currentHealth = 0;
         }
 
-        if (armor >= 100f)
+        if (currentArmor >= maxArmor)
         {
-            armor = 100f;
+            currentArmor = maxArmor;
         }
 
-        if (armor <= 0f)
+        if (currentArmor <= 0)
         {
-            armor = 0f;
+            currentArmor = 0;
         }
     }
 
-     public void TakeDamage(float amount)
+    public void AddHealth()
     {
-        //healthText.text = health.ToString();
-        //armorText.text = armor.ToString();
+        currentHealth += 10;
+    }
+
+     public void TakeDamage(int amount)
+    {
+        //healthText.text = currentHealth.ToString();
+        //armorText.text = currentArmor.ToString();
 
         Max_Min_Stats();
 
-        
 
-            armor -= amount;
-        if (armor <= 0f)
+
+        currentArmor -= amount;
+        if (currentArmor <= 0)
         {
 
-            
 
-            health -= amount;
-            if (health <= 0f)
+
+            currentHealth -= amount;
+            if (currentHealth <= 0)
             {
                 Death();
             }
