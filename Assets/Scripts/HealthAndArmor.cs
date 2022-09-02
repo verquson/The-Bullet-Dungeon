@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Health_Armor : MonoBehaviour
+public class HealthAndArmor : MonoBehaviour
 {
     public float health;
     public float armor;
-    public TextMeshProUGUI armorText;
-    public TextMeshProUGUI healthText;
+   // public TextMeshProUGUI armorText;
+   // public TextMeshProUGUI healthText;
 
 
 
@@ -23,9 +23,9 @@ public class Health_Armor : MonoBehaviour
     void Update()
     {
 
-        
 
     }
+   
 
     private void Max_Min_Stats()
     {
@@ -50,14 +50,16 @@ public class Health_Armor : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float amount)
+     public void TakeDamage(float amount)
     {
-        healthText.text = health.ToString();
-        armorText.text = health.ToString();
+        //healthText.text = health.ToString();
+        //armorText.text = armor.ToString();
 
         Max_Min_Stats();
 
-        armor -= amount;
+        
+
+            armor -= amount;
         if (armor <= 0f)
         {
 
@@ -71,9 +73,10 @@ public class Health_Armor : MonoBehaviour
         }
     }
 
+  
     private void Death()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 
 }

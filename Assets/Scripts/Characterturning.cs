@@ -18,6 +18,7 @@ public class Characterturning : MonoBehaviour
 
     private Vector2 movement;
     private Vector2 aim;
+    
 
     private Vector3 playervelocity;
 
@@ -55,6 +56,7 @@ public class Characterturning : MonoBehaviour
     {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
         aim = playerControls.Controls.Aim.ReadValue<Vector2>();
+       
     }
     void HandleMovement()
     {
@@ -64,6 +66,9 @@ public class Characterturning : MonoBehaviour
         playervelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playervelocity * Time.deltaTime);
     }
+
+ 
+
     void HandleRotation()
     {
         if (isGamepad)

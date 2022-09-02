@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public BulletData shotData;
     public Transform firePoint;
     public GameObject bulletPrefab;
     bool fireOnCD = false;
-    public float fireRate = .1f;
+    
 
     void Update()
     {
         if (Input.GetButton("Fire1") && !fireOnCD)
         {
+            
             Shoot();
         }
     }
-    void Shoot()
+    public void Shoot()
     {
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         fireOnCD = true;
-        Invoke("ResetFireCD", fireRate);
+        Invoke("ResetFireCD",shotData.fireRate);
     }
 
     void ResetFireCD()
