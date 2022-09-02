@@ -22,7 +22,7 @@ public class Health_Armor : MonoBehaviour
     void Update()
     {
 
-        Max_Min_Stats();
+        
 
     }
 
@@ -51,9 +51,14 @@ public class Health_Armor : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        Max_Min_Stats();
+
         armor -= amount;
         if (armor <= 0f)
         {
+
+            
+
             health -= amount;
             if (health <= 0f)
             {
