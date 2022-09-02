@@ -6,7 +6,8 @@ public class Health_Armor : MonoBehaviour
 {
     public float health;
     public float armor;
-
+    public GUIText armorText;
+    public GUIText healthText;
 
 
 
@@ -15,7 +16,8 @@ public class Health_Armor : MonoBehaviour
     {
         health = 100f;
         armor = 20f;
-
+        healthText = healthText.GetComponent<GUIText>();
+        armorText = armorText.GetComponent<GUIText>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,9 @@ public class Health_Armor : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        healthText.text = health.ToString();
+        armorText.text = health.ToString();
+
         Max_Min_Stats();
 
         armor -= amount;
