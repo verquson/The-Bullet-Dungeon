@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7367386688853341848}
   - component: {fileID: 49969297423897849}
   - component: {fileID: 4120918394323365754}
-  - component: {fileID: 4507839393937116287}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4507839393937116287
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542676758213940509}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3899683265131279129
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3899683265131279129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.867535, y: -13.57, z: -93.21775}
+  m_LocalPosition: {x: 54.929, y: -13.6322, z: -93.21775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -195,10 +180,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.5933037
+  m_Height: 2.1575546
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.010753632, y: -0.090768404, z: 0.014717102}
 --- !u!54 &6029425321531158382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -214,7 +199,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &9023464050408061040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +212,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822dc55c993a4b343862ae18e719cc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Particle: {fileID: 2736970535100243920, guid: 90df335247dabfa41ba8e4421c3613d6,
+    type: 3}
