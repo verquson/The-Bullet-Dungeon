@@ -113,7 +113,7 @@ public class Characterturning : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<HealthAndArmor>().AddHealth();
+            collision.gameObject.GetComponent<HealthAndArmor>().TakeDamage(20);
         }
     }
 }
