@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
-  - Small Heals
+  - Enemy
+  - Undefined
+  - Healing
   layers:
   - Default
   - TransparentFX
