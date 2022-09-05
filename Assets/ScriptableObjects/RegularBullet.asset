@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918d80745f14c7547854ce9ac4a229c2, type: 3}
   m_Name: RegularBullet
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3899683265131279129, guid: 3b85c555f50fe564498d02785459bf5c,
+    type: 3}
   BulletName: RegularBullet
   BulletDamage: 10
   fireRate: 0.02
