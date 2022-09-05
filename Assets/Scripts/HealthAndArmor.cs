@@ -17,7 +17,7 @@ public class HealthAndArmor : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       //currentHealth = maxHealth;
+        currentHealth = maxHealth;
         currentArmor = maxArmor;
     }
 
@@ -54,7 +54,7 @@ public class HealthAndArmor : MonoBehaviour
 
     public void AddHealth()
     {
-        currentHealth += 10;
+        currentHealth += 50;
     }
 
      public void TakeDamage(int amount)
@@ -80,7 +80,22 @@ public class HealthAndArmor : MonoBehaviour
         }
     }
 
-  
+
+    public void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(20);
+        }
+
+        if (collision.gameObject.CompareTag("Healing"))
+        {
+            AddHealth();
+        }
+
+
+    }
     private void Death()
     {
         Destroy(this.gameObject);
