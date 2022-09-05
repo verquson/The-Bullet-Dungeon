@@ -81,21 +81,7 @@ public class HealthAndArmor : MonoBehaviour
     }
 
 
-    public void OnCollisionEnter(Collision collision)
-    {
 
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(20);
-        }
-
-        if (collision.gameObject.CompareTag("Healing"))
-        {
-            AddHealth();
-        }
-
-
-    }
     private void Death()
     {
         Destroy(this.gameObject);
