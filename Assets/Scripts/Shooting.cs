@@ -6,7 +6,6 @@ public class Shooting : MonoBehaviour
 {
     public BulletData shotData;
     public Transform firePoint;
-    public Transform secondaryFirePoint;
     public GameObject bulletPrefab;
     bool fireOnCD = false;
     
@@ -22,7 +21,6 @@ public class Shooting : MonoBehaviour
     public void Shoot()
     {
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        GameObject SecondaryBullet = Instantiate(bulletPrefab, secondaryFirePoint.position, secondaryFirePoint.rotation);
         fireOnCD = true;
         Invoke("ResetFireCD",shotData.fireRate);
     }
