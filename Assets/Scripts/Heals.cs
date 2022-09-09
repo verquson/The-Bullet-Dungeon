@@ -7,7 +7,6 @@ public class Heals : MonoBehaviour
 {  
     public int Healing;
 
-    
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<HealthAndArmor>())
@@ -17,7 +16,4 @@ public class Heals : MonoBehaviour
         }
         
     }
-
-
-
 }

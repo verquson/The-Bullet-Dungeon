@@ -1167,7 +1167,7 @@ MonoBehaviour:
   firePoint: {fileID: 8950145856964659687}
   bulletPrefab: {fileID: 3899683265131279129, guid: 3b85c555f50fe564498d02785459bf5c,
     type: 3}
-  minShootWaitTime: 1
+  minShootWaitTime: 0.5
   maxShootWaitTime: 3
 --- !u!136 &8269080721854462044
 CapsuleCollider:
@@ -1261,7 +1261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5fb2f27de6af3cb4c8f3ffdd67fbd792, type: 2}
+  - {fileID: 2100000, guid: c1a693a3f0e87cd4ba00191efd3f2c3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1388,7 +1388,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9000963166941154333}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 1.9999998

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -31,7 +30,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject EnemyBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
 }

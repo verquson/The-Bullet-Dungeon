@@ -12,23 +12,12 @@ public class HealthAndArmor : MonoBehaviour
     //public TextMeshProUGUI armorText;
     //public TextMeshProUGUI healthText;
 
-
-
-    // Use this for initialization
     void Start()
     {
         currentHealth = maxHealth;
         currentArmor = maxArmor;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
    
-
     private void Max_Min_Stats()
     {
         if (currentHealth >= maxHealth)

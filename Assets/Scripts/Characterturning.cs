@@ -45,7 +45,7 @@ public class Characterturning : MonoBehaviour
         playerControls.Disable();
     }
 
-  
+    
     void Update()
     {
         HandleInput();
@@ -109,7 +109,7 @@ public class Characterturning : MonoBehaviour
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
     }
 
-    public void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
