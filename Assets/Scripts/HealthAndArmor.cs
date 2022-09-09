@@ -41,6 +41,15 @@ public class HealthAndArmor : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter (Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(20);
+        }
+    }
+
+
     public void AddHealth()
     {
         currentHealth += 50;

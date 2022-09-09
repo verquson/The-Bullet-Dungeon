@@ -51,14 +51,7 @@ public class Characterturning : MonoBehaviour
         HandleInput();
         HandleMovement();
         HandleRotation();
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            collision.gameObject.GetComponent<HealthAndArmor>().TakeDamage(20);
-        }
+      
     }
 
     void HandleInput()
