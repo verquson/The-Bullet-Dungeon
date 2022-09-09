@@ -16,4 +16,4 @@ MonoBehaviour:
     type: 3}
   BulletName: RegularBullet
   BulletDamage: 10
-  fireRate: 0.02
+  fireRate: 0.4
