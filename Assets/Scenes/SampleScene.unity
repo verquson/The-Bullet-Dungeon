@@ -133,13 +133,13 @@ PrefabInstance:
     - target: {fileID: -1149485005032372250, guid: 656286df74c1c3a45851a13118bafb2b,
         type: 3}
       propertyPath: turrets.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1149485005032372250, guid: 656286df74c1c3a45851a13118bafb2b,
         type: 3}
       propertyPath: turrets.Array.data[0]
       value: 
-      objectReference: {fileID: 314664883}
+      objectReference: {fileID: 991087914}
     - target: {fileID: -1149485005032372250, guid: 656286df74c1c3a45851a13118bafb2b,
         type: 3}
       propertyPath: turrets.Array.data[1]
@@ -474,12 +474,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a338ed04299a4764b8f15cdbece39976, type: 3}
---- !u!1 &314664883 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8269080721854462047, guid: e1d6e133cc25593488514a7797e5f895,
-    type: 3}
-  m_PrefabInstance: {fileID: 1568553261}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &314664890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8269080721854462040, guid: e1d6e133cc25593488514a7797e5f895,
@@ -1637,7 +1631,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7415803566434110481, guid: e1d6e133cc25593488514a7797e5f895, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1d6e133cc25593488514a7797e5f895, type: 3}
 --- !u!4 &1575753993 stripped
 Transform:

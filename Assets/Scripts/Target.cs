@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
-public partial class TurretDemo : MonoBehaviour
+public partial class Target : MonoBehaviour
 {
     public GameObject[] turrets;
 
