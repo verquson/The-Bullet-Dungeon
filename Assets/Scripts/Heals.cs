@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Heals : MonoBehaviour
-    
+
 {  
     public int Healing;
 
@@ -16,4 +16,13 @@ public class Heals : MonoBehaviour
         }
         
     }
+    
+    
+
+        void Update()
+        {
+            transform.Rotate(new Vector3(0, 0.3f, 0));
+        }
+    
 }
+
