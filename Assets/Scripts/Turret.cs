@@ -11,6 +11,7 @@ public partial class Turret : MonoBehaviour{
     public float yawLimit = 90f;
     public float pitchLimit = 90f;
     public Vector3 target;
+    private GameObject Player;
 
     private Quaternion yawSegmentStartRotation;
     private Quaternion pitchSegmentStartRotation;
@@ -18,9 +19,15 @@ public partial class Turret : MonoBehaviour{
     public virtual void Start(){
         this.yawSegmentStartRotation = this.yawSegment.localRotation;
         this.pitchSegmentStartRotation = this.pitchSegment.localRotation;
+        Player=GameManager.Instance.Player;
     }
 
     public virtual void Update(){
+        if(Player==null)
+            return;
+
+        target = Player.transform.position;
+
         float angle = 0.0f;
         Vector3 targetRelative = default(Vector3);
         Quaternion targetRotation = default(Quaternion);
