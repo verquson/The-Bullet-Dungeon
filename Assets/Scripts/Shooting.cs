@@ -31,11 +31,4 @@ public class Shooting : MonoBehaviour
     {
         fireOnCD = false;
     }
-
-
-    void Start()
-    {
- 
-        
-    }
 }

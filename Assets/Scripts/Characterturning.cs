@@ -34,6 +34,8 @@ public class Characterturning : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
+        GameManager.Instance.Player = this.gameObject;
+        GameManager.Instance.Playercontroller = this;
     }
 
     private void OnEnable()
@@ -45,13 +47,15 @@ public class Characterturning : MonoBehaviour
         playerControls.Disable();
     }
 
-  
+    
     void Update()
     {
         HandleInput();
         HandleMovement();
         HandleRotation();
+      
     }
+
     void HandleInput()
     {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
@@ -109,11 +113,5 @@ public class Characterturning : MonoBehaviour
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            collision.gameObject.GetComponent<HealthAndArmor>().TakeDamage(20);
-        }
-    }
+   
 }
