@@ -34,6 +34,8 @@ public class Characterturning : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
+        GameManager.Instance.Player = this.gameObject;
+        GameManager.Instance.Playercontroller = this;
     }
 
     private void OnEnable()

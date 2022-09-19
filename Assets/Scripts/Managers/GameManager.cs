@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public Characterturning Player;
+    public GameObject Player;
+    public Characterturning Playercontroller;
 
     bool isPaused = false;
 
@@ -31,14 +32,14 @@ public class GameManager : Singleton<GameManager>
             Time.timeScale = 0;
             UIManager.Instance.ToggleMenu(true);
             isPaused = true;
-            Player.canMove = false;
+            Playercontroller.canMove = false;
         }
         else
         {
             Time.timeScale = 1;
             UIManager.Instance.ToggleMenu(false);
             isPaused = false;
-            Player.canMove = true;  
+            Playercontroller.canMove = true;  
         }
     }
 }
