@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Heals : MonoBehaviour
-
+    
 {  
     public int Healing;
 
+    
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<HealthAndArmor>())
@@ -16,13 +17,10 @@ public class Heals : MonoBehaviour
         }
         
     }
-    
-    
+    void Update()
+    {
+        transform.Rotate(0, 0.3f, 0);
+    }
 
-        void Update()
-        {
-            transform.Rotate(new Vector3(0, 0.3f, 0));
-        }
-    
+
 }
-
