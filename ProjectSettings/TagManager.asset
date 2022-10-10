@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Undefined
   - Healing
+  - Wall
+  - BOX
   layers:
   - Default
   - TransparentFX
