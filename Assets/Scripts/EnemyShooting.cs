@@ -7,13 +7,13 @@ public class EnemyShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    [SerializeField]
+    [SerializeField] //antaa minimi ja maximi cooldownin
     private float minShootWaitTime = 1f, maxShootWaitTime = 3f;
 
     private float waitTime;
 
     private void Start()
-    {
+    {  
         waitTime = Time.time + Random.Range(minShootWaitTime, maxShootWaitTime);
     }
 
@@ -29,7 +29,7 @@ public class EnemyShooting : MonoBehaviour
     }
 
     void Shoot()
-    {
+    {   
         GameObject EnemyBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
