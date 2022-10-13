@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class Characterturning : MonoBehaviour
 {
+    //annetaan dataa 
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float gravityValue = -9f;
     [SerializeField] private float controllerDeadzone = 0.1f;
@@ -15,7 +16,7 @@ public class Characterturning : MonoBehaviour
     [SerializeField] private bool isGamepad;
 
     private CharacterController controller;
-
+    //kerrotaan mit‰ inputteja halutaan tekem‰‰n mit‰kin toimintaa
     private Vector2 movement;
     private Vector2 aim;
     
@@ -29,6 +30,7 @@ public class Characterturning : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    //etsit‰‰n pelaajan inputit input managerist‰
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -38,6 +40,7 @@ public class Characterturning : MonoBehaviour
         GameManager.Instance.Playercontroller = this;
     }
 
+    //ottaa kontrollit p‰‰lle ja pois
     private void OnEnable()
     {
         playerControls.Enable();
@@ -47,7 +50,7 @@ public class Characterturning : MonoBehaviour
         playerControls.Disable();
     }
 
-    
+    //ottaa alhaalla olevat s‰‰dˆt p‰‰lle
     void Update()
     {
         HandleInput();
@@ -56,12 +59,15 @@ public class Characterturning : MonoBehaviour
       
     }
 
+    //s‰‰t‰‰ inputit
     void HandleInput()
     {
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
         aim = playerControls.Controls.Aim.ReadValue<Vector2>();
        
     }
+
+    //s‰‰t‰‰ liikkumisen
     void HandleMovement()
     {
         Vector3 move = new Vector3(movement.x, 0, movement.y);
@@ -72,7 +78,7 @@ public class Characterturning : MonoBehaviour
     }
 
  
-
+    //s‰‰t‰‰ k‰‰nnˆn
     void HandleRotation()
     {
         if (isGamepad)
@@ -101,13 +107,14 @@ public class Characterturning : MonoBehaviour
         }
     }
 
+    //s‰‰t‰‰ t‰ht‰‰mist‰
     private void LookAt(Vector3 lookPoint)
     {
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint);
     }
 
-
+    //vaihtaa ohjainkontrolleihin vaihdossa
     public void OnDeviceChange (PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;

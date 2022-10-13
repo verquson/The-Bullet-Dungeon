@@ -4,6 +4,7 @@ using System.Collections;
 [System.Serializable]
 public partial class Turret : MonoBehaviour{
 
+    //kerrotaan tykin kääntökulman ja niiden rajat
     public Transform yawSegment;
     public Transform pitchSegment;
     public float yawSpeed = 30f;
@@ -16,12 +17,15 @@ public partial class Turret : MonoBehaviour{
     private Quaternion yawSegmentStartRotation;
     private Quaternion pitchSegmentStartRotation;
 
+
+    //löytää pelaajan ja aloituspisteen tykille
     public virtual void Start(){
         this.yawSegmentStartRotation = this.yawSegment.localRotation;
         this.pitchSegmentStartRotation = this.pitchSegment.localRotation;
         Player=GameManager.Instance.Player;
     }
 
+    //Turret tavaraa minkä löysin netistä
     public virtual void Update(){
         if(Player==null)
             return;
@@ -49,6 +53,8 @@ public partial class Turret : MonoBehaviour{
             if((this.pitchLimit < 360f) && (this.pitchLimit > 0f))    this.pitchSegment.rotation = Quaternion.RotateTowards(this.pitchSegment.parent.rotation * this.pitchSegmentStartRotation, targetRotation, this.pitchLimit);
             else    this.pitchSegment.rotation = targetRotation;
         }
+
+        //piirtää viivat sinne minne turret tähtää
         Debug.DrawLine(this.pitchSegment.position, this.target, Color.red);
         Debug.DrawRay(this.pitchSegment.position, this.pitchSegment.forward * (this.target - this.pitchSegment.position).magnitude, Color.green);
     }

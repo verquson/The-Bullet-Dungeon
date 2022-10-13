@@ -3,20 +3,16 @@ using System.Collections;
 
 public class SlowTime : MonoBehaviour
 {
-
+    //kerrotaan että kuinka paljon halut
     float currentAmount = 0f;
     public float maxAmount = 5f;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+   
 
     // Update is called once per framew
     void Update()
     {
-
+        //kun painaa spacea, aika hidastuu
         if (Input.GetKeyDown("space"))
         {
 
