@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c636a8d2f6c4dbf4b9f5f034a976c348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healing: 100
+  Healing: 50
 --- !u!23 &8188118425252355714
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.ComponentModel;
 
 public class HealthAndArmor : MonoBehaviour
 {
@@ -79,10 +81,11 @@ public class HealthAndArmor : MonoBehaviour
     }
 
 
-
+    
     private void Death()
     {
         Destroy(this.gameObject);
+        SceneManager.LoadScene("Mainmenu");
     }
 
 }
