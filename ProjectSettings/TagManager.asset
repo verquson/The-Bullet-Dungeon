@@ -13,11 +13,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - bullet
   - Water
   - UI
-  - 
-  - 
+  - bossbullet
+  - boss
   - 
   - 
   - 

@@ -5,9 +5,10 @@ using UnityEngine;
 public class Heals : MonoBehaviour
     
 {  
+    //kerrotaan kuinka paljon halutaan antaa healingia
     public int Healing;
 
-    
+    //lisää healthia pelaajalle kun siihen törmätään
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<HealthAndArmor>())
@@ -17,6 +18,7 @@ public class Heals : MonoBehaviour
         }
         
     }
+    //pistää heathpackit pyörimään
     void Update()
     {
         transform.Rotate(0, 0.3f, 0);

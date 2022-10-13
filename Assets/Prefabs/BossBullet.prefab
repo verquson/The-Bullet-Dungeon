@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7367386688853341848}
   - component: {fileID: 49969297423897849}
   - component: {fileID: 4120918394323365754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5914856067017339751}
   - component: {fileID: 6029425321531158382}
   - component: {fileID: 9023464050408061040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 5607236665665488900}
   - component: {fileID: 8415561505101170498}
   - component: {fileID: 4277269331540348684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

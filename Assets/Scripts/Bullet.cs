@@ -25,14 +25,5 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject);
 
     }
-    public void OnCollisionEnter1(Collision collision)
-    {
 
-        if (collision.gameObject.GetComponent<EnemyHealth>())
-        {
-            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(data.BulletDamage);
-        }
-        Destroy(this.gameObject);
-
-    }
 }

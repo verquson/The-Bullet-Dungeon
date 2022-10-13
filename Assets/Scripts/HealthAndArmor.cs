@@ -85,7 +85,7 @@ public class HealthAndArmor : MonoBehaviour
     private void Death()
     {
         Destroy(this.gameObject);
-        SceneManager.LoadScene("Mainmenu");
+        SceneManager.LoadScene("init");
     }
 
 }

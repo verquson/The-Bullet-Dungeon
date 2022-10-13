@@ -7,8 +7,8 @@ using System.ComponentModel;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth;
-    public int maxArmor;
+    public int maxHealt;
+    public int maxArmour;
     int curHealth;
     int curArmor;
     //public TextMeshProUGUI armorText;
@@ -16,15 +16,15 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
-        curHealth = maxHealth;
-        curArmor = maxArmor;
+        curHealth = maxHealt;
+        curArmor = maxArmour;
     }
 
-    private void Max_Min_Stats()
+    private void Max_MinStats()
     {
-        if (curHealth >= maxHealth)
+        if (curHealth >= maxHealt)
         {
-            curHealth = maxHealth;
+            curHealth = maxHealt;
         }
 
         if (curHealth <= 0)
@@ -32,9 +32,9 @@ public class EnemyHealth : MonoBehaviour
             curHealth = 0;
         }
 
-        if (curArmor >= maxArmor)
+        if (curArmor >= maxArmour)
         {
-            curArmor = maxArmor;
+            curArmor = maxArmour;
         }
 
         if (curArmor <= 0)
@@ -43,22 +43,22 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnte(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(20);
+            TakeDamag(20);
         }
     }
 
 
    
-    public void TakeDamage(int amount)
+    public void TakeDamag(int amount)
     {
         //healthText.text = currentHealth.ToString();
         //armorText.text = currentArmor.ToString();
 
-        Max_Min_Stats();
+        Max_MinStats();
 
 
 

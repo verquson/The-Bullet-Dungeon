@@ -298,8 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59318eef7f501cf47baa178f05038e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  maxArmor: 10
+  maxHealt: 100
+  maxArmour: 100
 --- !u!1 &117378
 GameObject:
   m_ObjectHideFlags: 0

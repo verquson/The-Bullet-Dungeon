@@ -285,7 +285,7 @@ RectTransform:
   m_GameObject: {fileID: 516095860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.3959093, y: 5.061679, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1503212727}
@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.585, y: 167.5683}
-  m_SizeDelta: {x: 224.4216, y: 55.6615}
+  m_AnchoredPosition: {x: 91.91028, y: 313.45447}
+  m_SizeDelta: {x: 247.3687, y: 53.8654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516095862
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Text
+  m_text: The Bullet Lab
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -499,7 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda40b3c83a28cb4dbacc992d41c563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2658906268385868116, guid: 656286df74c1c3a45851a13118bafb2b, type: 3}
+  Player: {fileID: 0}
+  Playercontroller: {fileID: 0}
 --- !u!114 &611052620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,8 +699,8 @@ MonoBehaviour:
   levels:
   - name: Lvl1
     scene:
-      sceneAsset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
-      scenePath: Assets/Scenes/SampleScene.unity
+      sceneAsset: {fileID: 102900000, guid: fb396b1732688ab4bada195f192de743, type: 3}
+      scenePath: Assets/Scenes/Lvl1.unity
 --- !u!114 &760975308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,7 +1177,7 @@ RectTransform:
   m_GameObject: {fileID: 1248895246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.1199, y: 2.8585, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 802329500}
@@ -1467,7 +1468,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f4aeef3c82fc78846bae0d94ca50e90f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
