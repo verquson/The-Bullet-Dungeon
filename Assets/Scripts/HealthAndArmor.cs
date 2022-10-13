@@ -15,13 +15,13 @@ public class HealthAndArmor : MonoBehaviour
     //public TextMeshProUGUI healthText;
 
     void Start()
-    {
+    { //asettaa alku healthit
         currentHealth = maxHealth;
         currentArmor = maxArmor;
     }
    
     private void Max_Min_Stats()
-    {
+    {    // asettaa rajoja
         if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
@@ -42,7 +42,7 @@ public class HealthAndArmor : MonoBehaviour
             currentArmor = 0;
         }
     }
-
+    // törmäyksessä aiheuttaa damagea.
     void OnCollisionEnter (Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -51,12 +51,12 @@ public class HealthAndArmor : MonoBehaviour
         }
     }
 
-
+    //mahdollistaa lisä healthien saannin
     public void AddHealth()
     {
         currentHealth += 50;
     }
-
+    //mahdollistaa damagen oton.
      public void TakeDamage(int amount)
     {
         //healthText.text = currentHealth.ToString();
@@ -81,7 +81,7 @@ public class HealthAndArmor : MonoBehaviour
     }
 
 
-    
+    //kuolemassa tuhoaa objektin ja heittää takaisin menuun.
     private void Death()
     {
         Destroy(this.gameObject);

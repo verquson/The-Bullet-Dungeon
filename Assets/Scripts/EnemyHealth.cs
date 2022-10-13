@@ -16,11 +16,13 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        //asettaa alku healthit
         curHealth = maxHealt;
         curArmor = maxArmour;
     }
 
     private void Max_MinStats()
+        // asettaa rajoja.
     {
         if (curHealth >= maxHealt)
         {
@@ -42,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
             curArmor = 0;
         }
     }
-
+    // törmäyksessä aiheuttaa damagea.
     void OnCollisionEnte(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -52,7 +54,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-   
+   //mahdollistaa damagen oton.
     public void TakeDamag(int amount)
     {
         //healthText.text = currentHealth.ToString();
@@ -77,7 +79,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-
+    // kuolemassa tuhoaa objektin
     private void Dead()
     {
         Destroy(this.gameObject);

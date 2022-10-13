@@ -25,23 +25,21 @@ public class Patrol : MonoBehaviour
 
     void GotoNextPoint()
     {
-        // Returns if no points have been set up
+        // palaa takaisin jos pointteja ei ole asetettu.
         if (points.Length == 0)
             return;
 
-        // Set the agent to go to the currently selected destination.
+        // asettaa agentin menem‰‰n seuraavaksi valittuun kohteeseen
         agent.destination = points[destPoint].position;
 
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
+        // valitsee seuraavan pointin ja matkan. jos ei enemp‰‰ pointteja niin alkaa alusta.
         destPoint = (destPoint + 1) % points.Length;
     }
 
 
     void Update()
     {
-        // Choose the next destination point when the agent gets
-        // close to the current one.
+        // p‰‰tt‰‰ pointin kun p‰‰set l‰helle toista.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }

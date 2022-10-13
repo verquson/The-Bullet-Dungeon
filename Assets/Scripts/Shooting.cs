@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
     
 
     void Update()
-    {
+    {   //mahdollistaa ampumisen
         if (Input.GetButton("Fire1") && !fireOnCD)
         {
             
@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
         }
     }
     public void Shoot()
-    {
+    {    //antaa luodeille arvoja ja mahdollistaa toisen aseen käytön.
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         GameObject SecondaryBullet = Instantiate(bulletPrefab, secondaryFirePoint.position, secondaryFirePoint.rotation);
         fireOnCD = true;
@@ -28,7 +28,7 @@ public class Shooting : MonoBehaviour
     }
 
     void ResetFireCD()
-    {
+    {    //cooldown
         fireOnCD = false;
     }
 }
